@@ -1,2 +1,5 @@
 # AssignmentTesting
-This is the Project we are about to develope and integrate 
+# Group Members
+Sohail Javed
+Vinod
+Wasiq 
