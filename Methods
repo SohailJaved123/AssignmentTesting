@@ -1,0 +1,14 @@
+public static Account CreateSavingsAccount(String customerId, double interestRate, double balance)
+{
+    Savings savings = new Savings(balance, interestRate, customerId);
+    SQLiteDB db = new SQLiteDB();
+    db.CreateAccountInDB(savings, 1);
+    return null;
+}
+public static Account CreateCurrentAccount(string customerId, double initBalance, double minBalance, double fee)
+{
+    Current current = new Current(initBalance,minBalance,fee,customerId);
+    SQLiteDB db = new SQLiteDB();
+    db.CreateAccountInDB(current, 0);
+    return null;
+}
