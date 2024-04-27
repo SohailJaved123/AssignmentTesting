@@ -12,3 +12,16 @@ public static string CreateUser(UserType type, string govId, string name, string
     sql.CreateUserInDB(customer, 0);
     return customer.CustomerId;
 }
+public static List<string> ListOfAccountBalance(string customerId)
+{
+    // get the number of account
+    SQLiteDB db = new SQLiteDB();
+    List<string> accountNumbers = db.GetAllAccountsFromDB(customerId);
+    List<string> balances = new List<string>();
+
+    for (int i = 0; i<=accountNumbers.Count; i++)
+    {
+        balances[i] = accountNumbers[i] +"-"+ db.GetBalance(accountNumbers[i]);
+    }
+    return balances;
+}
