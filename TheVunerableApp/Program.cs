@@ -1,4 +1,4 @@
-﻿/*
+/*
  This Code is built in C# Language. It is a bank application
  You can open this application in Microsoft Visual Studio 2022.
  
@@ -24,19 +24,28 @@ namespace TheVunerableApp
         static void Main(string[] args)
         {
             Console.WriteLine("Start");
-           // Program.DbSetUpForTesting(); // For setup only Do not use it unless the db is in inconsistence state.
+                       
+           Program.DbSetUpForTesting(); // For setup only Do not use it unless the db is in inconsistence state.
+            //Test Cases for each member
+            Test.TestCase.Wasiq_Testing1();
+            Test.TestCase.Wasiq_Testing2();
+            Test.TestCase.Sohail_Testing1();
+            Test.TestCase.Sohail_Testing2();
+            Test.TestCase.Vinod_Testing1();
+            Test.TestCase.Vinod_Testing2();
 
 
-            /* Following are test methods that you can use individually to run some test drivers for the code.
-             * However, you should be writing your test code in Test.cs */
 
-            // Program.UpdateCustomerDetails();
-            // Program.DisplayUserDetails();
-            // Program.SearchCustomerByAccountNumeber();
-            // Program.getAllUserAccounts();
+
+            
+
+             //Program.UpdateCustomerDetails();
+             //Program.DisplayUserDetails();
+             //Program.SearchCustomerByAccountNumeber();
+             //Program.getAllUserAccounts();
             //Program.AddCustomerToAccount();
             //Program.getAccountBalance();
-           // Program.PrintFilePathsFromAppSettings();
+            //Program.PrintFilePathsFromAppSettings();
 
         }
 
@@ -108,9 +117,9 @@ namespace TheVunerableApp
             //TransactionController.StoreTransactions("46101163", 675.00, "52805275");
             //Console.WriteLine("Setup complete..");
 
-            //SQLiteDB sQLiteDB = new SQLiteDB();
-            //sQLiteDB.ConnectToDS();
-            // sQLiteDB.getAuthForTest();
+            SQLiteDB sQLiteDB = new SQLiteDB();
+            sQLiteDB.ConnectToDS();
+             sQLiteDB.getAuthForTest();
 
 
         }
