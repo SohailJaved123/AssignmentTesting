@@ -1,0 +1,10 @@
+public static List<string> SearchAccountByCustomer(string customerId) 
+ {
+     SQLiteDB db = new SQLiteDB();
+    return db.GetAllAccountsFromDB(customerId);
+ }
+public static void AddCustomerToAnAccount(string accountNumber, string customerId) 
+{ 
+    SQLiteDB db = new SQLiteDB();
+    db.AddCustomerToAnAccount(accountNumber, customerId);
+}
