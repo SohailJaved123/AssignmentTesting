@@ -1,0 +1,14 @@
+public static string CreateUser(UserType type, string govId, string name, string sName, string email, string password, DateTime startDate, Position position, Role role, string branchName, string branchId)
+{
+    SQLiteDB sql = new SQLiteDB(); 
+    if (type == UserType.Admin) // Admin
+    {
+        Admin admin = new Admin(govId, name, sName, email, password, startDate, position, role, branchName, branchId);
+        sql.CreateUserInDB(admin, 1);
+        return admin.AdminId;
+    }
+    // else a Customer
+    Customer customer = new Customer(govId, name, sName, email, password);
+    sql.CreateUserInDB(customer, 0);
+    return customer.CustomerId;
+}
