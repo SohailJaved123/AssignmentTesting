@@ -24,7 +24,7 @@ namespace TheVunerableApp.Test
     }
     public static void Wasiq_Testing1()
     {
-            AccountController.AddCustomerToAnAccount("1", "2");
+            AccountController.AddCustomerToAnAccount("1", "3");
     }
     public static void Wasiq_Testing2()
     {
