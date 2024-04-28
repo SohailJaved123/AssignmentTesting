@@ -34,6 +34,7 @@ namespace TheVunerableApp
             Test.TestCase.Vinod_Testing1();
             Test.TestCase.Vinod_Testing2();
          Test.TestCase.Vinod_Testing2();
+         Test.TestCase.Vinod_Testing1();
          
 
 
